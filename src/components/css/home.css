@@ -11,22 +11,22 @@ body {
 }
 .backgroundDiv {
   font-family: 'OAGothic-ExtraBold';
-  margin-top: 180px;
+  margin-top: 250px;
   text-align: center;
 }
 .logoImg {
-  width: 520px;
+  width: 570px;
   padding-left: 60px;
   margin-bottom: 20px;
 }
 .startPlay {
-  font-size: 60px;
+  font-size: 70px;
   text-shadow: -6px -6px 0 #fff, 6px -6px 0 #fff, -6px 6px 0 #fff, 6px 6px 0 #fff;
   color: #009220;
   margin-bottom: 15px;
 }
 .gallery {
-  font-size: 40px;
-  text-shadow: -8px -6px 0 #fff, 6px -6px 0 #fff, -6px 6px 0 #fff, 6px 6px 0 #fff;
+  font-size: 60px;
+  text-shadow: -6px -6px 0 #fff, 6px -6px 0 #fff, -6px 6px 0 #fff, 6px 6px 0 #fff;
   color: #FF6A00;
 }
