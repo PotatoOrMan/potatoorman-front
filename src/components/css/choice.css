@@ -22,7 +22,7 @@ body {
     align-items: center;
     margin: 0 auto; /* 가운데 정렬 */
     margin-top: 45px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .choicePotato {
@@ -30,12 +30,16 @@ body {
     margin: 0 auto; /* 가운데 정렬 */
 }
 .potatoImg {
-    width: 300px;
+    width: 270px;
 }
 .potato1, .potato3 {
     margin-bottom: 100px;
 }
+.potato2 {
+    margin: 0 45px;
+}
 .potato4 {
     margin-left: 150px;
-    margin-bottom: 50px;
+    margin-right: 90px;
+    margin-bottom: 20px;
 }
