@@ -13,11 +13,11 @@ body {
 }
 
 .storyDiv {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 80px;
+    height: 100vh;  /* 대화창을 제일 아래쪽에 배치하기 위함 */
 }
 .person-text, .text-box {
     display: flex;
