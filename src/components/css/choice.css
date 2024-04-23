@@ -26,20 +26,20 @@ body {
 }
 
 .choicePotato {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto; /* 가운데 정렬 */
 }
 .potatoImg {
-    width: 270px;
+    width: 300px;
 }
 .potato1, .potato3 {
     margin-bottom: 100px;
 }
 .potato2 {
-    margin: 0 45px;
+    margin: 0 145px;
 }
 .potato4 {
-    margin-left: 150px;
-    margin-right: 90px;
+    margin-left: 180px;
+    margin-right: 180px;
     margin-bottom: 20px;
 }

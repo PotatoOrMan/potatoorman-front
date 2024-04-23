@@ -4,7 +4,7 @@ import Home from "./components/home"
 import Gallery from "./components/gallery"
 import Story from "./components/story"
 import Choice from "./components/choice"
-import Round1 from "./components/round1"
+import Round from "./components/round"
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
 					<Route path="/gallery" element={<Gallery />}></Route>
 					<Route path="/story" element={<Story />}></Route>
 					<Route path="/choice" element={<Choice />}></Route>
-					<Route path="/round1" element={<Round1 />}></Route>
+					<Route path="/round" element={<Round />}></Route>
 				</Routes>
 			</BrowserRouter>
 		</div>
