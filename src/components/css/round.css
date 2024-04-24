@@ -26,3 +26,13 @@
     font-size: 80px;
     font-family: 'KCC-Hanbit';
 }
+
+.resultDiv {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resultPotato {
+    width: 500px;
+}
