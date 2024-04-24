@@ -6,21 +6,32 @@ function GaugeBar({index}) {
     return <div className='gaugebar'>
         <img src={`../images/play_potatos/play_potato${index+1}.png`} alt='gaugePotatoImg'/>
         <img src={`../images/play_potatos/play_potato${index+2}.png`} alt='gaugePotatoImg'/>
+        {console.log('gaugebar')}
     </div>
 }
+function MainPlayView({potatoImg, time}) {
+    return <>
+        <p className='time'>{time}</p>
+        <img src={`${potatoImg}`} className='mainPotatoImg' alt='playPotatoImg'/>
+        {console.log('mainplayview')}
+    </>
+}
+function ResultPlayView({potatoImg}) {
+    return <div className='resultDiv'>
+        <img src={`${potatoImg}`} className='resultPotato' alt='playPotatoImg'/>
+        {console.log('resultplayview')}
+    </div>;
+}
 
-function PlayView({index, potatoImg}){
+function PlayView({index, potatoImg, time}){
     if(index !== 3) {
         return <div className='playDiv'>
             <GaugeBar index={index}/>
-            <p className='time'>10</p>
-            <img src={`${potatoImg}`} className='mainPotatoImg' alt='playPotatoImg'/>
+            <MainPlayView potatoImg={potatoImg} time={time}/>
         </div>;
     }
     else if(index ===3) {
-        return <div className='resultDiv'>
-        <img src={`${potatoImg}`} className='resultPotato' alt='playPotatoImg'/>
-    </div>;
+        return <ResultPlayView potatoImg={potatoImg} />
     }
 }
 
@@ -37,23 +48,19 @@ export default function Round() {
     const bgImg = playData.bgImg[playIdx];
     const potatoImg = playData.potatoImg[playIdx];
 
+    // 배경이미지와 playIdx를 바꾸는 useEffect 함수
     useEffect(() => {
         document.body.style.backgroundImage = `url(${bgImg})`;
-
         const timeoutId = setTimeout(() => {
-            if (playIdx !== 3) {
-                setPlayIdx((prevIdx) => prevIdx + 1);
-            }
-        }, 10000);
-
+            if (playIdx !== 3) setPlayIdx((prevIdx) => prevIdx + 1);
+        }, 11000);
         return () => clearTimeout(timeoutId);
     }, [playIdx, bgImg]);
-
+    // time을 설정하는 useEffect 함수
     useEffect(() => {
         const timeoutId = setTimeout(() => {
-            if (time > 0) {
-                setTime((prevTime) => prevTime - 1);
-            }
+            if (time > 0) setTime((prevTime) => prevTime - 1);
+            else setTime(10); // 한 라운드가 끝나면 time을 5로 초기화시켜줌
         }, 1000);
 
         return () => clearTimeout(timeoutId);
@@ -61,5 +68,6 @@ export default function Round() {
     
     return <>
         <PlayView index={playIdx} potatoImg={potatoImg} time={time}/>
+        {console.log('main')}
     </>;
 }
