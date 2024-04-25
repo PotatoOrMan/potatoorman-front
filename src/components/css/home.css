@@ -24,8 +24,15 @@ body {
   color: #009220;
   margin-bottom: 15px;
 }
+.startPlay:hover {
+  font-size: 68px;
+  margin-bottom: 18px;
+}
 .gallery {
   font-size: 60px;
   text-shadow: -6px -6px 0 #fff, 6px -6px 0 #fff, -6px 6px 0 #fff, 6px 6px 0 #fff;
   color: #FF6A00;
+}
+.gallery:hover {
+  font-size: 58px;
 }
