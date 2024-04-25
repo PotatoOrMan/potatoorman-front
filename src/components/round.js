@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import "./css/round.css";
 
 function GaugeBar({index}) {
@@ -22,7 +22,6 @@ function ResultPlayView({potatoImg}) {
         {console.log('resultplayview')}
     </div>;
 }
-
 function PlayView({index, potatoImg, time}){
     if(index !== 3) {
         return <div className='playDiv'>
@@ -38,10 +37,11 @@ function PlayView({index, potatoImg, time}){
 export default function Round() {
     const location = useLocation(); // Link로 props값 받아오기
     const index = location.state.index; //stroy에서 넘긴 index값 저장
-    const playData = {
+    // useMemo를 써서 불필요하게 객체가 생성되는 것을 막음
+    const playData = useMemo(()=>({        //({}) <= 이렇게 써주기
         bgImg : ["../images/backgrounds/play_background1.png", "../images/backgrounds/play_background2.png", "../images/backgrounds/play_background3.png", "../images/backgrounds/play_background3.png"],
         potatoImg : [`../images/potatos/potato${index}_1.png`, `../images/potatos/potato${index}_1.png`, `../images/potatos/potato${index}_2.png`,`../images/potatos/potato${index}_3.png`]
-    }
+        }),[index]);
     const [playIdx, setPlayIdx] = useState(0);
     const [time, setTime] = useState(10);
 
@@ -65,9 +65,8 @@ export default function Round() {
 
         return () => clearTimeout(timeoutId);
     }, [time]);
-    
+
     return <>
-        <PlayView index={playIdx} potatoImg={potatoImg} time={time}/>
-        {console.log('main')}
+    <PlayView index={playIdx} potatoImg={potatoImg} time={time}/>
     </>;
 }
