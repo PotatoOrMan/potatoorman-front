@@ -7,15 +7,7 @@ function InfoBox({ text, changeIndex }) {
     return (
         <>
             <div className="person-text">나</div>
-            <div className="text-box">
-            <Typewriter
-                options={{
-                    strings: [text],
-                    autoStart: true,
-                    loop: false,
-                }}
-                />
-            </div>
+            <div className="text-box">{text}</div>
             <i className="bi bi-caret-right-fill" onClick={() => {
                     changeIndex();
             }}></i>
