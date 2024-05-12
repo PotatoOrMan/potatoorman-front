@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
-import Typewriter from 'typewriter-effect';
 import "./css/story.css";
 
 function InfoBox({ text, changeIndex }) {

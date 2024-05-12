@@ -43,7 +43,7 @@ body {
     border-radius: 30px;
     text-align: center;
 }
-.bi-caret-right-fill {
+.storyDiv > .bi-caret-right-fill {
     color: #129510;
     font-size: 80px;
     position: absolute; 
