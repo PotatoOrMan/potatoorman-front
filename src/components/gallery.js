@@ -13,7 +13,22 @@ function TextView() {
 }
 
 function PhotoView() {
-
+    return (
+        <div className="photo-container">
+            <div className="photo-item"></div>
+            <div className="photo-item"></div>
+            <div className="photo-item"></div>
+            <div className="photo-item"></div>
+            <div className="photo-item"></div>
+            <div className="photo-item"></div>
+            <div className="photo-item"></div>
+            <div className="photo-item"></div>
+            <div className="photo-item"></div>
+            <div className="photo-item"></div>
+            <div className="photo-item"></div>
+            <div className="photo-item"></div>
+        </div>
+    )
 }
 
 export default function Gallery() {
@@ -21,7 +36,7 @@ export default function Gallery() {
         document.body.style.backgroundImage = `url("../images/backgrounds/play_background1.png")`;
     }, []);
 
-    return <div className="photo-container">
+    return <div className="photo-div">
     <TextView />
     <PhotoView />
     </div>
