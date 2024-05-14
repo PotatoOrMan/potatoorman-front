@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./css/round.css";
 import Gaugebar from './gaugebar';
 import PlayView from './playview';
@@ -9,12 +9,19 @@ import PlayView from './playview';
 // 여기에서 감자인덱스와 라운드 인덱스를 받아서 컴포넌트 관리하기
 
 export default function Round() {
+    const location = useLocation();
+    const index = location.state.index; //stroy에서 넘긴 index값 저장
+    const roundIdx = 1;
+
+    useEffect(() => {
+        document.body.style.backgroundImage = `url("../images/backgrounds/play_background${roundIdx}.png")`;
+    }, []);
 
     return (
-        <>
-        <Gaugebar />
-        <PlayView />
-        </>
+        <div className='playDiv'>
+        <Gaugebar roundIdx={roundIdx} potatoIdx={index}/>
+        <PlayView roundIdx={roundIdx} potatoIdx={index}/>
+        </div>
     )
 }
 

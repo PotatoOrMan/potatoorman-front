@@ -11,9 +11,10 @@ function InfoBox({ text, changeIndex }) {
             <div className="text-box">
                 <Typewriter 
                     options={{
-                        strings: text,
-                        autoStart: true,
-                        loop: false,
+                        strings: text,  // 출력하고 싶은 문자열
+                        autoStart: true,    // 자동 시작
+                        loop: false,    // 글자가 지워지고 반복 여부
+                        delay: 80  // 글자 타이핑 속도
                       }}
                 />  
             </div>

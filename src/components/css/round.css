@@ -7,36 +7,3 @@ body {
     align-items: center;
     flex-direction: column;
 }
-
-.gaugebar {
-    width: 1336px;
-    height: 122px;
-    margin-top: 65px;
-    border-radius: 60px;
-    border: solid 10px #fff;
-    background-image: linear-gradient(to right, #F7F6BB, #FFE23A);
-    
-    display: flex;
-    justify-content: space-between;
-}
-.gaugebar > img {
-    object-fit: none; /* 이미지 크기 자동맞춤 안함 */
-    padding-right: 15px;    
-}
-
-.time {
-    margin-top: 40px;
-    margin-bottom: 150px;
-    font-size: 80px;
-    font-family: 'KCC-Hanbit';
-}
-
-.resultDiv {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.resultPotato {
-    width: 500px;
-}

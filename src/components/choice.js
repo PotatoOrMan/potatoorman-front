@@ -14,7 +14,7 @@ function ChoicePotato(){
     return <div className="choicePotato">
         {
             PotatoOptions.map((potato => {
-                return <Link to="/roundmanager" state={{index:potato.index}}>
+                return <Link to="/round" state={{index:potato.index}}>
                     <img src={potato.image} className={`potatoImg ${potato.className}`} alt="potatoImg"/>
                 </Link>
             }))
