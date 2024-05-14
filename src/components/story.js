@@ -1,12 +1,22 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
+import Typewriter from 'typewriter-effect';
 import "./css/story.css";
 
 function InfoBox({ text, changeIndex }) {
+
     return (
         <>
             <div className="person-text">나</div>
-            <div className="text-box">{text}</div>
+            <div className="text-box">
+                <Typewriter 
+                    options={{
+                        strings: text,
+                        autoStart: true,
+                        loop: false,
+                      }}
+                />  
+            </div>
             <i className="bi bi-caret-right-fill" onClick={() => {
                     changeIndex();
             }}></i>
