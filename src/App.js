@@ -5,6 +5,7 @@ import Gallery from "./components/gallery"
 import Story from "./components/story"
 import Choice from "./components/choice"
 import Round from "./components/round"
+import RoundManager from './components/roundmanager';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
 					<Route path="/story" element={<Story />}></Route>
 					<Route path="/choice" element={<Choice />}></Route>
 					<Route path="/round" element={<Round />}></Route>
+					<Route path="/roundmanager" element={<RoundManager />}></Route>
 				</Routes>
 			</BrowserRouter>
 		</div>

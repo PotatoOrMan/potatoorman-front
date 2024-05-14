@@ -1,11 +1,14 @@
 import "./css/reset.css";
 import "./css/gallery.css";
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function TextView() {
     return (
         <div className="top-bar">
-            <i className="bi bi-caret-left-fill"></i>
+            <Link to="/" className="left-arrow">
+                <i className="bi bi-caret-left-fill"></i>
+            </Link>
             <span className="gallery-text">갤러리</span>
             <i className="bi bi-caret-right-fill"></i>
         </div>
@@ -15,9 +18,6 @@ function TextView() {
 function PhotoView() {
     return (
         <div className="photo-container">
-            <div className="photo-item"></div>
-            <div className="photo-item"></div>
-            <div className="photo-item"></div>
             <div className="photo-item"></div>
             <div className="photo-item"></div>
             <div className="photo-item"></div>
