@@ -19,7 +19,7 @@ export default function Round() {
     useEffect(() => {
         const roundTime = setTimeout(() => {
             if(roundIdx < 3) setRoundIdx(idx => idx + 1)
-        }, 3000)
+        }, 6000)
         return () => clearTimeout(roundTime)
     }, [roundIdx])
 

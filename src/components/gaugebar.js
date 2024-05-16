@@ -3,6 +3,7 @@ import "./css/gaugebar.css";
 
 export default function Gaugebar({roundIdx, potatoIdx}) {
     const [gaugeWidth, setGaugeWidth] = useState(114)
+    const gaugebarColor = ['F7F6BB', 'FFE23A', '9ADA28', '149710']
 
     const handleKeyDown = useCallback((event) => {
         if (event.code === 'Space') {
@@ -16,15 +17,20 @@ export default function Gaugebar({roundIdx, potatoIdx}) {
     }, []);
 
     useEffect(() => {
+        setGaugeWidth(114); // roundIdx가 변경될 때마다 gaugeWidth를 114로 초기화
+    }, [roundIdx]);
+
+    useEffect(() => {
         window.addEventListener('keydown', handleKeyDown);
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
     }, [handleKeyDown]);
+    
 
     return <div className="gaugebarContainer">
         <div className='gaugebar'>
-            <div className="innerGaugebar" style={{width : `${gaugeWidth}px`}}></div>
+            <div className="innerGaugebar" style={{width : `${gaugeWidth}px`, backgroundImage : `linear-gradient(to right, #${gaugebarColor[roundIdx - 1]}, #${gaugebarColor[roundIdx]})`}}></div>
         </div>
         <div className="imgContainer">
             <img src={`../images/play_potatos/play_potato${roundIdx}.png`} alt='gaugePotatoImg'/>

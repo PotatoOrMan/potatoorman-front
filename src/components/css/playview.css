@@ -3,6 +3,7 @@
     margin-bottom: 130px;
     font-size: 80px;
     font-family: 'KCC-Hanbit';
+    transition: 0.1s
 }
 .mainPotatoImg {
     width: 400px;

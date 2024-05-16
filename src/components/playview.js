@@ -14,7 +14,7 @@ export default function PlayView({roundIdx, potatoIdx}) {
     }, [time])
 
     useEffect(() => {
-        setTime(2)
+        setTime(5)
     }, [roundIdx])
 
     return <>     
