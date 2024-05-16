@@ -8,25 +8,15 @@
     align-items: center;
 }
 .innerGaugebar {
-    /* width: 1314px; */
-    width: 100px;
     height: 100px;
     border-radius: 50px;
     margin-left: 11px;
     background-image: linear-gradient(to right, #F7F6BB, #FFE23A);
-    transition: all ease 2s 0s; /* 애니메이션 테스트 코드 */
+    transition: 0.2s;
 }
 .imgContainer {
     display: flex;
     justify-content: space-between;
     margin-top: -96px;  /* innerGaugebar 세로 중앙에 맞춤 */
     padding: 0 25px;
-}
-/* 애니메이션 테스트 코드 */
-.testinput {
-    position: absolute;
-    top: 50px;
-}
-input:checked ~ .innerGaugebar {
-    width: 1314px;
 }
