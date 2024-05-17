@@ -5,7 +5,7 @@ export default function Gaugebar({roundIdx, potatoIdx}) {
     const [gaugeWidth, setGaugeWidth] = useState(114)
     const gaugebarColor = ['F7F6BB', 'FFE23A', '9ADA28', '149710']
 
-    const handleKeyDown = useCallback((event) => {
+    const handleKeyUp = useCallback((event) => {
         if (event.code === 'Space') {
             setGaugeWidth((prevWidth) => {
                 if (prevWidth < 1314) {
@@ -17,15 +17,16 @@ export default function Gaugebar({roundIdx, potatoIdx}) {
     }, []);
 
     useEffect(() => {
+        // gaugeWidth 업데이트 코드
         setGaugeWidth(114); // roundIdx가 변경될 때마다 gaugeWidth를 114로 초기화
     }, [roundIdx]);
 
     useEffect(() => {
-        window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('keyup', handleKeyUp);  // spacebar를 꾹 눌렀을 때 게이지가 차지 않도록 keydown 대신 keyup을 사용함
         return () => {
-            window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('keyup', handleKeyUp);
         };
-    }, [handleKeyDown]);
+    }, [handleKeyUp]);
     
 
     return <div className="gaugebarContainer">
