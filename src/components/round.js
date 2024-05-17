@@ -12,7 +12,7 @@ export default function Round() {
     const location = useLocation()
     const index = location.state.index   //stroy에서 넘긴 index값 저장
     const [roundIdx, setRoundIdx] = useState(1)
-    const [updateGaugeWidth, setUpdateGaugeWidth] = useState([])
+    // const [updateGaugeWidth, setUpdateGaugeWidth] = useState([])
 
     useEffect(() => {
         document.body.style.backgroundImage = `url(../images/backgrounds/play_background${roundIdx}.png)`;
