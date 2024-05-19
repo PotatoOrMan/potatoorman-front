@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./css/playview.css";
 
 export default function PlayView({roundIdx, potatoIdx}) {
-    const [time, setTime] = useState(2)
+    const [time, setTime] = useState(10)
 
     useEffect(() => {
         if(time > 0) {  // 타이머가 무한반복 하지 않도록
@@ -14,7 +14,7 @@ export default function PlayView({roundIdx, potatoIdx}) {
     }, [time])
 
     useEffect(() => {
-        setTime(5)
+        setTime(10)
     }, [roundIdx])
 
     return <>     

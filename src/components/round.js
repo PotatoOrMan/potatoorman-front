@@ -3,10 +3,7 @@ import { useEffect, useState } from "react";
 import "./css/round.css";
 import Gaugebar from './gaugebar';
 import PlayView from './playview';
-import ResultPlayView from './resultPlayview'
- 
-// 게이지바, 타이머, 감자를 각각 다른 컴포넌트에 정의하여 불러오기
-// 여기에서 감자인덱스와 라운드 인덱스를 받아서 컴포넌트 관리하기
+import ResultPlayView1 from './resultPlayview1'
 
 export default function Round() {
     const location = useLocation()
@@ -21,13 +18,13 @@ export default function Round() {
     useEffect(() => {
         const roundTime = setTimeout(() => {
             if(roundIdx < 4) setRoundIdx(idx => idx + 1)
-        }, 6000)
+        }, 11000)
         return () => clearTimeout(roundTime)
     }, [roundIdx])
 
     return (
         roundIdx === 4 ? 
-        <ResultPlayView  potatoIdx={index}/> :  // 결과 화면
+        <ResultPlayView1  potatoIdx={index}/> :  // 결과 화면
         // 라운드 화면
         <div className='playDiv'>  
         <Gaugebar roundIdx={roundIdx} potatoIdx={index}/>

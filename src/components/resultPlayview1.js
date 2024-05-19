@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import "./css/resultPlayview.css";
+import "./css/resultPlayview1.css";
 
-export default function ResultPlayView({potatoIdx}) {
+export default function ResultPlayview1({potatoIdx}) {
     useEffect(() => {
         document.body.style.backgroundImage = "url(../images/backgrounds/play_background3.png)"
     }, [])

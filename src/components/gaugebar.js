@@ -9,7 +9,7 @@ export default function Gaugebar({roundIdx, potatoIdx}) {
         if (event.code === 'Space') {
             setGaugeWidth((prevWidth) => {
                 if (prevWidth < 1314) {
-                    return prevWidth + 20;
+                    return prevWidth + 10;
                 }
                 return prevWidth; // 1314px 이상일 경우 더 이상 증가하지 않음
             });

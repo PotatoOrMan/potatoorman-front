@@ -5,6 +5,7 @@ import Gallery from "./components/gallery"
 import Story from "./components/story"
 import Choice from "./components/choice"
 import Round from "./components/round"
+import ResultPlayview2 from './components/resultPlayview2';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
 					<Route path="/story" element={<Story />}></Route>
 					<Route path="/choice" element={<Choice />}></Route>
 					<Route path="/round" element={<Round />}></Route>
+					<Route path="/resultplayview2" element={<ResultPlayview2 />}></Route>
 				</Routes>
 			</BrowserRouter>
 		</div>
