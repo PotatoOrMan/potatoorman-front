@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 import "./css/story.css";
 
-function InfoBox({ text, changeIndex }) {
+function InfoBox({ text, changeIndex, person }) {
 
     return (
         <>
-            <div className="person-text">나</div>
+            <div className="person-text">{person}</div>
             <div className="text-box">
                 <Typewriter 
                     options={{
@@ -34,7 +34,8 @@ export default function Story() {
             "../images/backgrounds/story_background2.png",
             "../images/backgrounds/story_background3.png"
         ]
-    };    
+    }; 
+    const person = "나"   
     const [index, setIndex] = useState(0);
     const navigate = useNavigate(); // 화면 바꿀 때 사용
 
@@ -55,7 +56,7 @@ export default function Story() {
 
     return (
         <div className="storyDiv">
-            <InfoBox text={text} changeIndex={changeIndex}/>
+            <InfoBox text={text} changeIndex={changeIndex} person={person}/>
         </div>
     );
 }
