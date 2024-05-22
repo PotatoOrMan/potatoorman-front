@@ -34,8 +34,10 @@ export default function Round() {
     return (
         showModal ? 
         <div className='roundmodalContainer'>
-            <text className='modalText'>스페이스바로<br></br>감자를 키워주세요!</text>
-            <div className='spacebar'>space</div>
+            <div className='roundmodal'>
+                <text className='modalText'>스페이스바로<br></br>감자를 키워주세요!</text>
+                <div className='spacebar'>space</div>
+            </div>
         </div> :
         roundIdx === 4 ? 
         <ResultPlayView1  potatoIdx={index}/> :  // 결과 화면
