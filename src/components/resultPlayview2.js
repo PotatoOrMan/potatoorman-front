@@ -6,6 +6,9 @@ export default function ResultPlayview2() {
         document.body.style.backgroundImage = "url(../images/backgrounds/play_background1.png)"
     }, [])
 
+    // 게이지 차오르는 효과 주기
+    // 총 게이지 보여준 후 결과 스토리 불러오기
+
     return (
         <>
             <div className="gaugeResultContainer">

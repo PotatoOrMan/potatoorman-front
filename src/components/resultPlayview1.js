@@ -10,7 +10,7 @@ export default function ResultPlayview1({potatoIdx}) {
     }, [])
 
     useEffect(() => {
-        const resultplayviewTimer = setTimeout(() => {navigate("/resultPlayview2")}, 3000)
+        const resultplayviewTimer = setTimeout(() => {navigate("/resultPlayview2")}, 2000)
         return () => clearTimeout(resultplayviewTimer)
     }, [navigate])
 
