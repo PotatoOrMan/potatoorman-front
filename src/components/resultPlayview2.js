@@ -26,7 +26,7 @@ export default function ResultPlayview2() {
                 </div>
 
             </div>
-            <img src="../images/ect/end_mark.png" className="endMark"/>
+            <img src="../images/ect/end_mark.png" className="endMark" alt="endmark"/>
             <div className="finalGaugebar">
                 <div className="finalInnerGaugebar">
                     <img src={"../images/play_potatos/play_potato2.png"} alt='gaugePotatoImg'/>

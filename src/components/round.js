@@ -24,10 +24,13 @@ export default function Round() {
     }, [roundIdx])
 
     useEffect(() => {
-        const modalTimer = setTimeout(() => {
-            setShowModal(false)
-        }, 3000)
-        return () => clearTimeout(modalTimer) // () => 함수 형태로 타이머 정리해주기
+        const handleKeyDwon = (e) => {
+            // 스페이스바를 누르면 모달창이 사라지기
+            if(e.key === ' ' || e.key === 'Space') setShowModal(false)
+        } 
+        document.addEventListener('keydown', handleKeyDwon)
+
+        return () => document.addEventListener('keydown', handleKeyDwon)
     }, [])
     
 
