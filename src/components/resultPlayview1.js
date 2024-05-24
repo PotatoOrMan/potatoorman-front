@@ -15,6 +15,6 @@ export default function ResultPlayview1({potatoIdx}) {
     }, [navigate])
 
     return <div className='resultDiv'>
-        <img src={`../images/potatos/potato${potatoIdx}_3.png`} className='resultPotato' alt='resultPotatoImg'/>
+        <img src={`../images/potatos/potato${potatoIdx}_4.png`} className='resultPotato' alt='resultPotatoImg'/>
     </div>;
 }
