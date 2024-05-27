@@ -9,8 +9,18 @@ export default function Roundmodal() {
 
     return (
         <div className='roundmodalContainer'>
-            <text className='modalText'>스페이스바로<br></br>감자를 키워주세요!</text>
-            <div className='spacebar'>space</div>
+            <div className='roundmodal'>
+                <text className='modalText'>스페이스바로<br></br>감자를 키워주세요!</text>
+                <div className='keysContainer'>
+                    <div className='spacebar'>space</div>
+                    <div className='fourKeys'>
+                            <div className='keyItem'>↑</div>
+                            <div className='keyItem'>←</div>
+                            <div className='keyItem'>↓</div>
+                            <div className='keyItem'>→</div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

@@ -7,6 +7,7 @@ import Choice from "./components/choice"
 import Round from "./components/round"
 import Storymanager from './components/storymanager';
 import ResultPlayview2 from './components/resultPlayview2';
+import Roundmodal from './components/roundmodal';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
 					<Route path="/round" element={<Round />}></Route>
 					<Route path="/storymanager" element={<Storymanager />}></Route>
 					<Route path="/resultPlayview2" element={<ResultPlayview2 />}></Route>
+					<Route path="/test" element={<Roundmodal />}></Route>
 				</Routes>
 			</BrowserRouter>
 		</div>

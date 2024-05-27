@@ -13,5 +13,6 @@ export default function Home() {
         <img src="../images/ect/logo.png" alt="logo" className="logoImg"/>
         <Link to="/storymanager"><p className="startPlay">- 게임시작 -</p></Link>
         <Link to="/gallery"><p className="gallery">갤러리</p></Link>
+        <Link to="/test"><p className="gallery">test</p></Link>
     </div>
 }

@@ -23,7 +23,7 @@ export default function PlayView({roundIdx, potatoIdx}) {
 
     return <>     
         <p className='time' style={{color:textColor}}>{time}</p>
-        <img src={`../images/potatos/potato${potatoIdx}_${roundIdx}.png`} className='mainPotatoImg' alt='playPotatoImg'/>
+        <img src={`../images/potatos/potato${potatoIdx}_${roundIdx + 1}.png`} className='mainPotatoImg' alt='playPotatoImg'/>
     </>
 
 }
