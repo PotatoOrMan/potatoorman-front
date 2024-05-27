@@ -42,9 +42,10 @@ export default function Round() {
                 <div className='keysContainer'>
                     <div className='spacebar'>space</div>
                     <div className='fourKeys'>
-                        <div className='keyItem upKey'>↑</div>
+                        {/* style에서 조건 체크해서 라운드마다 배경색 달라지게, 순서 배열에 넣기 */}
+                        <div className='keyItem upKey' style={{backgroundColor: 'red'}}>↑</div>
                         <div className='arrowKeys'>
-                            <div className='keyItem leftKey'>←</div>
+                            <div className='keyItem leftKey' style={{backgroundColor: 'blue'}}>←</div>
                             <div className='keyItem downKey'>↓</div>
                             <div className='keyItem rightKey'>→</div>
                         </div>
