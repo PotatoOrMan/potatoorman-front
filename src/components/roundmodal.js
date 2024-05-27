@@ -14,10 +14,12 @@ export default function Roundmodal() {
                 <div className='keysContainer'>
                     <div className='spacebar'>space</div>
                     <div className='fourKeys'>
-                            <div className='keyItem'>↑</div>
-                            <div className='keyItem'>←</div>
-                            <div className='keyItem'>↓</div>
-                            <div className='keyItem'>→</div>
+                        <div className='keyItem upKey'>↑</div>
+                        <div className='arrowKeys'>
+                            <div className='keyItem leftKey'>←</div>
+                            <div className='keyItem downKey'>↓</div>
+                            <div className='keyItem rightKey'>→</div>
+                        </div>
                     </div>
                 </div>
             </div>

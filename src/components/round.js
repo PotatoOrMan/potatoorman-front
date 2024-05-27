@@ -30,7 +30,7 @@ export default function Round() {
         } 
         document.addEventListener('keydown', handleKeyDwon)
 
-        return () => document.addEventListener('keydown', handleKeyDwon)
+        return () => document.removeEventListener('keydown', handleKeyDwon)
     }, [])
     
 
@@ -39,7 +39,17 @@ export default function Round() {
         <div className='roundmodalContainer'>
             <div className='roundmodal'>
                 <text className='modalText'>스페이스바로<br></br>감자를 키워주세요!</text>
-                <div className='spacebar'>space</div>
+                <div className='keysContainer'>
+                    <div className='spacebar'>space</div>
+                    <div className='fourKeys'>
+                        <div className='keyItem upKey'>↑</div>
+                        <div className='arrowKeys'>
+                            <div className='keyItem leftKey'>←</div>
+                            <div className='keyItem downKey'>↓</div>
+                            <div className='keyItem rightKey'>→</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div> :
         roundIdx === 4 ? 

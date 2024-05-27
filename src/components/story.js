@@ -44,6 +44,15 @@ export default function Story({storyData, person, limit, navigateURL}) {
         document.body.style.backgroundImage = `url(${bgImg})`;
     }, [bgImg]);
 
+    useEffect(() => {
+        const nextStory = (e) => {
+            if(e.key === ' ' || e.key === 'Space' || e.key === 'ArrowRight') changeIndex()
+        } 
+        document.addEventListener('keydown', nextStory)
+
+        return () => document.removeEventListener('keydown', nextStory)
+    },) 
+
     return (
         <div className="storyDiv">
             <InfoBox text={text} changeIndex={changeIndex} person={person}/>
