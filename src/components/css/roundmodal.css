@@ -28,7 +28,7 @@
 
 /* 글자와 간격 */
 .roundmodal > .keysContainer {
-    margin-top: 50px;
+    margin-top: 80px;
     display: flex;
     align-items: flex-end;
 }
@@ -64,13 +64,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #FBDC2E; */
     border: 5px solid #767676;
 }
 
 .upKey {
     margin-left: calc(72px + 10px);
     margin-bottom: 10px;
-    background-color: #FBDC2E;
 }
 

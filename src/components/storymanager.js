@@ -1,6 +1,6 @@
 import Story from "./story";
 
-export default function Storymanager() {
+export default function Storymanager({ manageNum = 1 }) {
     // const storyData = {
     // text: ["어! 저를 구해주셨군요!", "저는 김땡땡이라고 합니다", "새벽까지 공부하다가 간식으로 감자를 먹었는데...", "감자가 돼버렸어요!", "어쨌든 구해주셔서 감사해요! 복 받으실거에요!"],
     // bgImg: [
