@@ -1,6 +1,9 @@
 import Story from "./story";
+import { useLocation } from "react-router-dom"
 
-export default function Storymanager({ manageNum = 2 }) {
+export default function Storymanager() {
+    const propsNum = useLocation();
+
     const storyData1 = {
         text: ["아 역시 할 것도 없고 심심하네...", "어? 저게 할머니 감자밭인가?", "음? 뭐지?"],
         bgImg: [
@@ -25,18 +28,19 @@ export default function Storymanager({ manageNum = 2 }) {
     const limit2 = 4
     const navigateURL2 = ""
 
-    // const storyData = {
-    // text: ["(당신의 감자는 그렇게 평생 감자로 살았다....)"],
-    // bgImg: [
-    //     "../images/backgrounds/play_background1.png"
-    // ]}; 
-    // const person = "감자"
-    // const limit = 0
-    // const navigateURL = "gallery"
+    const storyData6 = {
+    text: ["(당신의 감자는 그렇게 평생 감자로 살았다....)"],
+    bgImg: [
+        "../images/backgrounds/play_background1.png"
+    ]}; 
+    const person6 = "감자"
+    const limit6 = 0
+    const navigateURL6 = "gallery"
 
-    switch(manageNum) {
+    switch(propsNum) {
         case 1 : return( <Story storyData={storyData1} person={person1} limit={limit1} navigateURL={navigateURL1}/> )
         case 2 : return( <Story storyData={storyData2} person={person2} limit={limit2} navigateURL={navigateURL2}/> )
+        case 6 : return( <Story storyData={storyData6} person={person6} limit={limit6} navigateURL={navigateURL6}/>)
         default : return null
     }
 

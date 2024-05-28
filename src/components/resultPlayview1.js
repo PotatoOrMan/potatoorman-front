@@ -10,9 +10,11 @@ export default function ResultPlayview1({potatoIdx}) {
     }, [])
 
     useEffect(() => {
-        const resultplayviewTimer = setTimeout(() => {navigate("/resultPlayview2")}, 2000)
+        const resultplayviewTimer = setTimeout(() => {
+            navigate("/resultPlayview2", {state : {propsNum : potatoIdx}})
+        }, 2000)
         return () => clearTimeout(resultplayviewTimer)
-    }, [navigate])
+    }, [navigate, potatoIdx])
 
     return <div className='resultDiv'>
         <img src={`../images/potatos/potato${potatoIdx}_3.png`} className='resultPotato' alt='resultPotatoImg'/>

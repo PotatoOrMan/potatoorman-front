@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./css/resultPlayview2.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function ResultScreen() {
     return (
@@ -36,6 +36,7 @@ function ResultScreen() {
 export default function ResultPlayview2() {
     const navigate = useNavigate()
     const [smoke, setSmoke] = useState(false)
+    const location = useLocation();
 
     useEffect(() => {
         document.body.style.backgroundImage = "url(../images/backgrounds/play_background1.png)"
@@ -51,10 +52,10 @@ export default function ResultPlayview2() {
 
     useEffect(() => {
         const navigateTimer = setTimeout(() => {
-            navigate('/storymanager')
+            navigate('/storymanager', {state : {propsNum : location.state}})
         }, 6200)
         return () => clearTimeout(navigateTimer)
-    }, [navigate])
+    }, [navigate, location.state])
     
     return (
         smoke ?
