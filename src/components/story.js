@@ -6,7 +6,7 @@ import "./css/story.css";
 function InfoBox({ text, changeIndex, person }) {
 
     return (
-        <>
+        <div className="storyDiv">
             <div className="person-text">{person}</div>
             <div className="text-box">
                 <Typewriter 
@@ -21,7 +21,7 @@ function InfoBox({ text, changeIndex, person }) {
             <i className="bi bi-caret-right-fill" onClick={() => {
                     changeIndex();
             }}></i>
-        </>
+        </div>
     );
 }
 
@@ -54,7 +54,8 @@ export default function Story({storyData, person, limit, navigateURL}) {
     },) 
 
     return (
-        <div className="storyDiv">
+        <div className="storyContainer">
+            <img src="../images/men/nerd.png" alt="menImg" className="menImg"/>
             <InfoBox text={text} changeIndex={changeIndex} person={person}/>
         </div>
     );

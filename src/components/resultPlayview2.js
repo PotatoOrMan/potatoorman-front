@@ -1,14 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./css/resultPlayview2.css";
+import { useNavigate } from "react-router-dom";
 
-export default function ResultPlayview2() {
-    useEffect(() => {
-        document.body.style.backgroundImage = "url(../images/backgrounds/play_background1.png)"
-    }, [])
-
-    // 게이지 차오르는 효과 주기
-    // 총 게이지 보여준 후 결과 스토리 불러오기
-
+function ResultScreen() {
     return (
         <>
             <div className="gaugeResultContainer">
@@ -36,5 +30,36 @@ export default function ResultPlayview2() {
                 </div>
             </div>
         </>
+    )
+}
+
+export default function ResultPlayview2() {
+    const navigate = useNavigate()
+    const [smoke, setSmoke] = useState(false)
+
+    useEffect(() => {
+        document.body.style.backgroundImage = "url(../images/backgrounds/play_background1.png)"
+    }, [])
+
+    // 5초 동안 결과를 보여주기 -> 연기 효과 나오면서 결과 스토리 화면으로 이동
+    useEffect(() => {
+        const resultTimer = setTimeout(() => {
+            setSmoke(true)
+        }, 5000)
+        return () => clearTimeout(resultTimer)
+    }, [])
+
+    useEffect(() => {
+        const navigateTimer = setTimeout(() => {
+            navigate('/storymanager')
+        }, 6200)
+        return () => clearTimeout(navigateTimer)
+    }, [navigate])
+    
+    return (
+        smoke ?
+        <img src="../images/smokeGIF.gif" alt="smokeGIF" style={{width : '100%', height : 'auto'}}/> 
+        :
+        <ResultScreen />
     )
 }
