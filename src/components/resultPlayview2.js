@@ -52,7 +52,7 @@ export default function ResultPlayview2() {
 
     useEffect(() => {
         const navigateTimer = setTimeout(() => {
-            navigate('/storymanager', {state : {propsNum : location.state}})
+            navigate('/storymanager', {state : {propsNum : location.state.propsNum}})
         }, 6200)
         return () => clearTimeout(navigateTimer)
     }, [navigate, location.state])

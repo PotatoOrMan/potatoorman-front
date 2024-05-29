@@ -25,7 +25,7 @@ function InfoBox({ text, changeIndex, person }) {
     );
 }
 
-export default function Story({storyData, person, limit, navigateURL}) {
+export default function Story({storyData, person, limit, navigateURL, resultImgURL}) {
     const [index, setIndex] = useState(0);
     const navigate = useNavigate(); // 화면 바꿀 때 사용
 
@@ -55,7 +55,7 @@ export default function Story({storyData, person, limit, navigateURL}) {
 
     return (
         <div className="storyContainer">
-            <img src="../images/men/nerd.png" alt="menImg" className="menImg"/>
+            {resultImgURL !== null ? <img src={resultImgURL} alt="menImg" className="menImg"/> : null}
             <InfoBox text={text} changeIndex={changeIndex} person={person}/>
         </div>
     );
