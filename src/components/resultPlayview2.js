@@ -3,6 +3,8 @@ import "./css/resultPlayview2.css";
 import { useNavigate, useLocation } from "react-router-dom";
 
 function ResultScreen() {
+    // 게이지 관련 변수
+
     return (
         <>
             <div className="gaugeResultContainer">
@@ -53,7 +55,7 @@ export default function ResultPlayview2() {
     useEffect(() => {
         const navigateTimer = setTimeout(() => {
             navigate('/storymanager', {state : {propsNum : location.state.propsNum}})
-        }, 6200)
+        }, 6200) // 결과창 보여주는것과 연기 gif가 나타나는 시간을 합친 것
         return () => clearTimeout(navigateTimer)
     }, [navigate, location.state])
     

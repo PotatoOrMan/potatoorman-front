@@ -19,30 +19,26 @@ export default function Storymanager() {
     const resultImgURL1 = null
         
     const storyData2 = {
-    text: ["어! 저를 구해주셨군요!", "저는 김땡땡이라고 합니다", "새벽까지 공부하다가 간식으로 감자를 먹었는데...", "감자가 돼버렸어요!", "어쨌든 구해주셔서 감사해요! 복 받으실거에요!"],
+    text: ["아 안녕! 000이라고 해~", "감자팩하다가 깜빡 잠들었더니 ㅎㅎ", "어쨌든 너무너무 고마워~~"],
     bgImg: [
-        "../images/backgrounds/end_background1.png",
-        "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png"
     ]}; 
-    const person2 = "김땡땡"
-    const limit2 = 4
+    const person2 = "잘생긴애"
+    const limit2 = 2
     const navigateURL2 = ""
     const resultImgURL2 = "../images/men/handsome.png"
 
     const storyData3 = {
-    text: ["어! 저를 구해주셨군요!", "저는 김땡땡이라고 합니다", "새벽까지 공부하다가 간식으로 감자를 먹었는데...", "감자가 돼버렸어요!", "어쨌든 구해주셔서 감사해요! 복 받으실거에요!"],
+    text: ["아 안녕하세요", "공부하면서 감자를 너무 많이 먹었나 그렇다고 감자 되는건 좀....", "하여튼 감사합니다"],
     bgImg: [
-        "../images/backgrounds/end_background1.png",
-        "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png"
     ]}; 
-    const person3 = "김땡땡"
-    const limit3 = 4
+    const person3 = "모범생"
+    const limit3 = 2
     const navigateURL3 = ""
     const resultImgURL3 = "../images/men/student.png"
 
@@ -55,22 +51,20 @@ export default function Storymanager() {
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png"
     ]}; 
-    const person4 = "김땡땡"
+    const person4 = "양아치"
     const limit4 = 4
     const navigateURL4 = ""
     const resultImgURL4 = "../images/men/badboy.png"
 
     const storyData5 = {
-    text: ["어! 저를 구해주셨군요!", "저는 김땡땡이라고 합니다", "새벽까지 공부하다가 간식으로 감자를 먹었는데...", "감자가 돼버렸어요!", "어쨌든 구해주셔서 감사해요! 복 받으실거에요!"],
+    text: ["ㅇ..안녕하세요...! 저는 000인데요...!", "여기 감자밭을 지나가다가 넘어졌는데... 감자가 됐어요....", "구해주셔서 감사합니다!!"],
     bgImg: [
-        "../images/backgrounds/end_background1.png",
-        "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png"
     ]}; 
-    const person5 = "김땡땡"
-    const limit5 = 4
+    const person5 = "너드"
+    const limit5 = 2
     const navigateURL5 = ""
     const resultImgURL5 = "../images/men/nerd.png"
 
