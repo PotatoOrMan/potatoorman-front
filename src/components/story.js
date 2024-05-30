@@ -33,7 +33,7 @@ export default function Story({storyData, person, limit, navigateURL, resultImgU
         if (index !== limit) {
             setIndex(index + 1);
         } else {
-            navigate(`/${navigateURL}`) // choice 화면으로 이동
+            navigate(`/${navigateURL}`) // choice 화면으로 이동, 사진 찍는 화면으로 이동
         }
     };
     

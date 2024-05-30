@@ -27,7 +27,7 @@ export default function Storymanager() {
     ]}; 
     const person2 = "잘생긴애"
     const limit2 = 2
-    const navigateURL2 = ""
+    const navigateURL2 = "photo"
     const resultImgURL2 = "../images/men/handsome.png"
 
     const storyData3 = {
@@ -39,7 +39,7 @@ export default function Storymanager() {
     ]}; 
     const person3 = "모범생"
     const limit3 = 2
-    const navigateURL3 = ""
+    const navigateURL3 = "photo"
     const resultImgURL3 = "../images/men/student.png"
 
     const storyData4 = {
@@ -53,7 +53,7 @@ export default function Storymanager() {
     ]}; 
     const person4 = "양아치"
     const limit4 = 4
-    const navigateURL4 = ""
+    const navigateURL4 = "photo"
     const resultImgURL4 = "../images/men/badboy.png"
 
     const storyData5 = {
@@ -65,7 +65,7 @@ export default function Storymanager() {
     ]}; 
     const person5 = "너드"
     const limit5 = 2
-    const navigateURL5 = ""
+    const navigateURL5 = "photo"
     const resultImgURL5 = "../images/men/nerd.png"
 
     const storyData6 = {
@@ -75,7 +75,7 @@ export default function Storymanager() {
     ]}; 
     const person6 = "감자"
     const limit6 = 0
-    const navigateURL6 = "gallery"
+    const navigateURL6 = "photo"
     const resultImgURL6 = `../images/potatos/potato${propsNum.state.propsNum}_1.png`
 
     switch(propsNum.state.propsNum) {
