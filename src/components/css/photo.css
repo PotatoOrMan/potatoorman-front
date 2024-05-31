@@ -1,11 +1,11 @@
-.App {
+.photoModalContainer {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
-.roundmodalContainer {
+.photoModal {
     width: 1020px;
     height: 600px;
     background-color: rgba(255, 255, 255, 0.7); /* 자식 요소에 opacity를 적용하지 않기 위해 rgba로 작성 */
@@ -18,12 +18,12 @@
     align-items: center;
 }
 
-.roundmodalContainer > .modalText { 
+.photoModal > .modalText { 
     font-family: 'KCC-Hanbit';
     font-size: 60px;
 }
 
-.roundmodalContainer > .spacebar {
+.photoModal > .spacebar {
     width: 460px;
     height: 75px;
     background-color: #FBDC2E;
