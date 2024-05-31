@@ -35,3 +35,13 @@
     justify-content: center;
     border: 5px solid #767676;
 }
+
+.webcamContainer {
+    
+}
+
+.capturedImageContainer {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}

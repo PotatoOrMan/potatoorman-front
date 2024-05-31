@@ -19,52 +19,54 @@ export default function Storymanager() {
     const resultImgURL1 = null
         
     const storyData2 = {
-    text: ["아 안녕! 000이라고 해~", "감자팩하다가 깜빡 잠들었더니 ㅎㅎ", "어쨌든 너무너무 고마워~~"],
+    text: ["어! 안녕! 000이라고 해~", "감자팩하다가 깜빡 잠들었더니 ㅎㅎ", "감자가 되버렸네~~", "어쨌든 너무너무 고마워~~"],
     bgImg: [
+        "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png"
     ]}; 
-    const person2 = "잘생긴애"
-    const limit2 = 2
+    const person2 = "백하민"
+    const limit2 = 3
     const navigateURL2 = "photo"
     const resultImgURL2 = "../images/men/handsome.png"
 
     const storyData3 = {
-    text: ["아 안녕하세요", "공부하면서 감자를 너무 많이 먹었나 그렇다고 감자 되는건 좀....", "하여튼 감사합니다"],
+    text: ["아 안녕하세요", "공부하면서 감자를 너무 많이먹었나..?", "감자에 갇혀서 공부도 못하고 하...", "하여튼 감사합니다"],
     bgImg: [
+        "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png"
     ]}; 
-    const person3 = "모범생"
-    const limit3 = 2
+    const person3 = "최재윤"
+    const limit3 = 3
     const navigateURL3 = "photo"
     const resultImgURL3 = "../images/men/student.png"
 
     const storyData4 = {
-    text: ["어! 저를 구해주셨군요!", "저는 김땡땡이라고 합니다", "새벽까지 공부하다가 간식으로 감자를 먹었는데...", "감자가 돼버렸어요!", "어쨌든 구해주셔서 감사해요! 복 받으실거에요!"],
+    text: ["너 뭐야?", "너가 나 감자에 가뒀냐?", "하 진짜 짜증나게...", "(툴툴대다 가버렸다)" ],
     bgImg: [
-        "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png"
     ]}; 
-    const person4 = "양아치"
-    const limit4 = 4
+    const person4 = "이도현"
+    const limit4 = 3
     const navigateURL4 = "photo"
     const resultImgURL4 = "../images/men/badboy.png"
 
     const storyData5 = {
-    text: ["ㅇ..안녕하세요...! 저는 000인데요...!", "여기 감자밭을 지나가다가 넘어졌는데... 감자가 됐어요....", "구해주셔서 감사합니다!!"],
+    text: ["ㅇ..안녕하세요...! 저는 000인데요...!", "여기 감자밭을 지나가다가 넘어졌는데...", "그래서 감자가... 이게 뭐야...!", "ㄱ..구..구해주셔서 감사합니다!!"],
     bgImg: [
+        "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png"
     ]}; 
-    const person5 = "너드"
-    const limit5 = 2
+    const person5 = "김민재"
+    const limit5 = 3
     const navigateURL5 = "photo"
     const resultImgURL5 = "../images/men/nerd.png"
 

@@ -3,17 +3,15 @@ import './css/photo.css';
 import Webcam from "react-webcam";
 
 const videoConstraints = {
-  width: 1280,
-  height: 720,
+  width: 1340,
+  height: 770,
   facingMode: "user",
 };
 
 const WebcamCapture = ({ onCapture }) => (
   <Webcam
     audio={false}
-    height={720}
     screenshotFormat="image/png"
-    width={1280}
     videoConstraints={videoConstraints}
   >
     {({ getScreenshot }) => (
@@ -30,7 +28,7 @@ const WebcamCapture = ({ onCapture }) => (
 );
 
 export default function Photo() {
-    const [bgImg, setBgImg] = useState('url(../images/backgrounds/play_background1.png)')
+    const [bgImg] = useState('url(../images/backgrounds/play_background1.png)')
     const [showModal, setShowModal] = useState(true)
     const [capturedImage, setCapturedImage] = useState(null);
 
@@ -62,7 +60,9 @@ export default function Photo() {
               <img src={capturedImage} alt="Captured" />
             </div>
           ) : (
-            <WebcamCapture onCapture={setCapturedImage} />
+            <div className="webcamContainer">
+              <WebcamCapture onCapture={setCapturedImage} />
+            </div>
           )}
         </>
     );
