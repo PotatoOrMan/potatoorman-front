@@ -11,6 +11,8 @@ const videoConstraints = {
 const WebcamCapture = ({ onCapture }) => (
   <Webcam
     audio={false}
+    width={1340}
+    height={770}
     screenshotFormat="image/png"
     videoConstraints={videoConstraints}
   >

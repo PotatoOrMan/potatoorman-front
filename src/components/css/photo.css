@@ -36,12 +36,13 @@
     border: 5px solid #767676;
 }
 
+.capturedImageContainer,
 .webcamContainer {
-    
-}
-
-.capturedImageContainer {
     display: flex;
     height: 100vh;
     align-items: center;
+}
+
+.webcamContainer {
+    border: 10px solid #fff;
 }
