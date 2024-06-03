@@ -58,7 +58,7 @@ export default function Storymanager() {
     const resultImgURL4 = "../images/men/badboy.png"
 
     const storyData5 = {
-    text: ["ㅇ..안녕하세요...! 저는 000인데요...!", "여기 감자밭을 지나가다가 넘어졌는데...", "그래서 감자가... 이게 뭐야...!", "ㄱ..구..구해주셔서 감사합니다!!"],
+    text: ["ㅇ..안녕하세요...! 저는 김민재인데요...!", "여기 감자밭을 지나가다가 넘어졌는데...", "그래서 감자가... 이게 뭐야...!", "ㄱ..구..구해주셔서 감사합니다!!"],
     bgImg: [
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",
