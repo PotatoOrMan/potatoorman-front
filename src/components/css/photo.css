@@ -42,3 +42,18 @@
     height: 100vh;
     align-items: center;
 }
+
+.webcamBorder {
+    border: 10px solid #fff;
+}
+
+.timeText {
+    position: fixed;
+    top: 50%;   /* 텍스트가 화면 정가운데 위치하도록 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300px;
+    font-weight: 900;
+    font-family: 'OA-Gothic';
+    /* color: #767676; */
+}

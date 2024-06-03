@@ -3,9 +3,10 @@ import './css/photo.css';
 import WebcamCapture from "./webcamCapture";
 
 export default function Photo() {
-  const [bgImg] = useState('url(../images/backgrounds/play_background1.png)');
+  const [bgImg, setBgImg] = useState('url(../images/backgrounds/play_background1.png)');
   const [showModal, setShowModal] = useState(true);
   const [capturedImage, setCapturedImage] = useState(null);
+  const [time, setTime] = useState(10)
 
   useEffect(() => {
     document.body.style.backgroundImage = bgImg;
@@ -14,11 +15,23 @@ export default function Photo() {
   // space 누르면 모달창 사라지고 사진 찍을 수 있도록 설정
   useEffect(() => {
     const handleModal = (e) => {
-      if (e.key === ' ' || e.key === 'Space') setShowModal(false);
+      if (e.key === ' ' || e.key === 'Space') {
+        setShowModal(false);
+        setBgImg('url(../images/backgrounds/home_background.png)')
+      }
     };
     document.addEventListener('keydown', handleModal);
     return () => document.removeEventListener('keydown', handleModal);
   }, []);
+
+  useEffect(() => {
+    if(time > 1 && showModal === false) {  // 타이머가 무한반복 하지 않도록
+        const timeId = setTimeout(() => {
+            setTime(prevTime => prevTime - 1)
+        },1000)
+        return () => clearTimeout(timeId)
+    }
+  }, [time, showModal])
 
   return (
     showModal ? 
@@ -36,7 +49,10 @@ export default function Photo() {
         </div>
       ) : (
         <div className="webcamContainer">
-          <WebcamCapture onCapture={setCapturedImage} />
+          <div className="webcamBorder">
+            <WebcamCapture onCapture={setCapturedImage} />
+            <p className="timeText">{time<=5 && time}</p>
+          </div>
         </div>
       )}
     </>
