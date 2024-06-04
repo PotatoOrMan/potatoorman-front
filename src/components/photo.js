@@ -47,24 +47,34 @@ export default function Photo() {
     </div>
     :
     <>
-      {capturedImage ? (
+      {capturedImage ? 
+      <>
         <div className="capturedImageContainer">
           <div className="captureImgBorder">
             <img src={capturedImage} alt="Captured" />
-            {/* <img src="../images/manframes/nerd_frame.png" className="Frame" alt="nerdFrmae"/> */}
-            <img src="../images/potatoframes/frame_potato4.png" className="Frame" alt="nerdFrmae"/>
+            <img src="../images/manframes/badboy_frame.png" className="Frame" alt="nerdFrmae"/>
+            {/* <img src="../images/potatoframes/frame_potato3.png" className="Frame" alt="nerdFrmae"/> */}
           </div>
         </div>
-      ) : (
+        <div className="sendEmail">
+            <p>사진을 전송하시겠습니까?</p>
+            <input type='text' />
+            <div className="buttonContainer">
+              <button>아니요</button>
+              <button type="submit">전송</button>
+            </div>
+          </div>
+      </>
+       : 
         <div className="webcamContainer">
           <div className="webcamBorder">
             <WebcamCapture onCapture={setCapturedImage} />
             <p className="timeText">{time<=5 && time}</p>
-            {/* <img src="../images/manframes/nerd_frame.png" className="Frame" alt="nerdFrmae"/> */}
-            <img src="../images/potatoframes/frame_potato3.png" className="Frame" alt="nerdFrmae"/>
+            <img src="../images/manframes/badboy_frame.png" className="Frame" alt="nerdFrmae"/>
+            {/* <img src="../images/potatoframes/frame_potato3.png" className="Frame" alt="nerdFrmae"/> */}
           </div>
         </div>
-      )}
+      }
     </>
   );
 }

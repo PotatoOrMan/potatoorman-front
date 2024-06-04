@@ -24,7 +24,7 @@ export default function Storymanager() {
     const resultImgURL1 = null
         
     const storyData2 = {
-    text: ["어! 안녕! 000이라고 해~", "감자팩하다가 깜빡 잠들었더니 ㅎㅎ", "감자가 되버렸네~~", "어쨌든 너무너무 고마워~~"],
+    text: ["어! 안녕! 백하민이라고 해~", "감자팩하다가 깜빡 잠들었더니 ㅎㅎ", "감자가 되버렸네~~", "어쨌든 너무너무 고마워~~"],
     bgImg: [
         "../images/backgrounds/end_background1.png",
         "../images/backgrounds/end_background1.png",

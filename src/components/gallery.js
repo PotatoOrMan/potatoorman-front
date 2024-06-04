@@ -27,6 +27,9 @@ function PhotoView() {
             <div className="photo-item"></div>
             <div className="photo-item"></div>
             <div className="photo-item"></div>
+            <div className="photo-item"></div>
+            <div className="photo-item"></div>
+            <div className="photo-item"></div>
         </div>
     )
 }
