@@ -43,8 +43,19 @@
     align-items: center;
 }
 
-.webcamBorder {
+.webcamBorder,
+.captureImgBorder {
     border: 10px solid #fff;
+    height: 790px;
+}
+
+.Frame {
+    /* width: 1340px; */
+    width: 600px;
+    position: absolute;
+    top: 50%;   /* 텍스트가 화면 정가운데 위치하도록 */
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .timeText {
@@ -55,5 +66,6 @@
     font-size: 300px;
     font-weight: 900;
     font-family: 'OA-Gothic';
-    /* color: #767676; */
+    opacity: 0.7;
+    z-index: 100;
 }

@@ -33,6 +33,10 @@ export default function Photo() {
     }
   }, [time, showModal])
 
+  useEffect(() => {
+    // 이메일 전송 창 띄우기
+  })
+
   return (
     showModal ? 
     <div className="photoModalContainer">
@@ -45,13 +49,19 @@ export default function Photo() {
     <>
       {capturedImage ? (
         <div className="capturedImageContainer">
-          <img src={capturedImage} alt="Captured" />
+          <div className="captureImgBorder">
+            <img src={capturedImage} alt="Captured" />
+            {/* <img src="../images/manframes/nerd_frame.png" className="Frame" alt="nerdFrmae"/> */}
+            <img src="../images/potatoframes/frame_potato4.png" className="Frame" alt="nerdFrmae"/>
+          </div>
         </div>
       ) : (
         <div className="webcamContainer">
           <div className="webcamBorder">
             <WebcamCapture onCapture={setCapturedImage} />
             <p className="timeText">{time<=5 && time}</p>
+            {/* <img src="../images/manframes/nerd_frame.png" className="Frame" alt="nerdFrmae"/> */}
+            <img src="../images/potatoframes/frame_potato3.png" className="Frame" alt="nerdFrmae"/>
           </div>
         </div>
       )}

@@ -5,6 +5,11 @@ export default function Storymanager() {
     const propsNum = useLocation();
     console.log(propsNum.state.propsNum)
 
+    //1번 감자를 선택했다면 랜덤으로 번호를 재생성한다
+    if(propsNum.state.propsNum === 1) {
+        propsNum.state.propsNum = Math.trunc(Math.random() * 3 + 3);
+    }
+
     //사람 이미지도 props로 전달하기
     const storyData1 = {
         text: ["아 역시 할 것도 없고 심심하네...", "어? 저게 할머니 감자밭인가?", "음? 뭐지?"],
