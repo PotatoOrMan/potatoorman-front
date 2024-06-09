@@ -42,6 +42,7 @@ export default function Story({storyData, person, limit, navigateURL, resultImgU
     
     useEffect(() => {
         document.body.style.backgroundImage = `url(${bgImg})`;
+        document.body.style.overflow = 'hidden'
     }, [bgImg]);
 
     useEffect(() => {

@@ -61,7 +61,7 @@ export default function Photo() {
             <input type='text' />
             <div className="buttonContainer">
               <button>아니요</button>
-              <button type="submit">전송</button>
+              <button>전송</button>
             </div>
           </div>
       </>
