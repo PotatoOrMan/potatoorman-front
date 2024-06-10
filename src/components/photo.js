@@ -52,8 +52,7 @@ export default function Photo() {
         <div className="capturedImageContainer">
           <div className="captureImgBorder">
             <img src={capturedImage} alt="Captured" />
-            <img src="../images/manframes/badboy_frame.png" className="Frame" alt="nerdFrmae"/>
-            {/* <img src="../images/potatoframes/frame_potato3.png" className="Frame" alt="nerdFrmae"/> */}
+            <img src="../images/frames/frame_2.png" className="Frame" alt="nerdFrmae"/>
           </div>
         </div>
         <div className="sendEmail">
@@ -70,8 +69,7 @@ export default function Photo() {
           <div className="webcamBorder">
             <WebcamCapture onCapture={setCapturedImage} />
             <p className="timeText">{time<=5 && time}</p>
-            <img src="../images/manframes/badboy_frame.png" className="Frame" alt="nerdFrmae"/>
-            {/* <img src="../images/potatoframes/frame_potato3.png" className="Frame" alt="nerdFrmae"/> */}
+            <img src="../images/frames/frame_2.png" className="Frame" alt="nerdFrmae"/>
           </div>
         </div>
       }
