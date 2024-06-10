@@ -29,6 +29,7 @@ const WebcamCapture = ({ onCapture }) => {
       height={770}
       screenshotFormat="image/png"
       videoConstraints={videoConstraints}
+      style={{transform: 'scaleX(-1)'}}
     />
   );
 };

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './css/photo.css';
 import WebcamCapture from "./webcamCapture";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 function PhotoModal() {
   return (
@@ -19,16 +19,16 @@ function CapturedImage({capturedImage, potatoIdx}) {
     <>
         <div className="capturedImageContainer">
           <div className="captureImgBorder">
-            <img src={capturedImage} alt="Captured" />
-            <img src={`../images/frames/frame_${potatoIdx}.png`} className="Frame" alt="photoframe"/>
+            <img src={capturedImage} alt="Captured" style={{transform: 'scaleX(-1)'}}/> {/* 사진 거울모드로 반전 */}
+            <img src={`../images/frames/frame_${potatoIdx}.png`} className="Frame" alt="photoframe" />
           </div>
         </div>
         <div className="sendEmail">
             <p>사진을 전송하시겠습니까?</p>
             <input type='email' placeholder="이메일 입력" className="sendInput"/>
             <div className="buttonContainer">
-              <button>아니요</button>
-              <button>전송</button>
+              <Link to="/"><button style={{backgroundColor:'#575757', marginRight:'130px'}}>아니요</button></Link>
+              <Link to="/"><button>전송</button></Link>
             </div>
           </div>
       </>

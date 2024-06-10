@@ -104,11 +104,7 @@
     height: 70px;
     border: none;
     border-radius: 30px;
-    background-color: #119A0E;
     color: #fff;
     font-size: 20px;
-}
-.buttonContainer button:first-child {
-    background-color: #575757; /* 아니요 버튼 색 지정 */
-    margin-right: 130px;
+    background-color: #119A0E;
 }
