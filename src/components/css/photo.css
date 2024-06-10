@@ -51,7 +51,6 @@
 
 .Frame {
     width: 1340px;
-    /* width: 600px; */
     position: absolute;
     top: 50%;   /* 텍스트가 화면 정가운데 위치하도록 */
     left: 50%;
