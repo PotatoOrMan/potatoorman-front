@@ -27,10 +27,10 @@
     margin: 0;
 }
 .gaugeResultContainer > .gaugebar > .innerGaugebar {
-    width: 78%;
     height: 76px;
     background-color: aqua;
     margin: 0;
+    transition: 1s;
 }
 
 .gaugeResultContainer > .gaugebar > .innerGaugebar > img {
@@ -48,11 +48,11 @@
     border: 10px solid #129510;
 }
 .finalGaugebar > .finalInnerGaugebar {
-    width: 85%;
     height: 90px;
     border-radius: 600px;
     background-image: linear-gradient(to right, #F7F6BB, #FCDC2A, #63DE17);
     padding: 10px 10px;
+    transition: 1s;
 }
 
 .endMark {

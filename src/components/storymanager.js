@@ -3,12 +3,16 @@ import { useLocation } from "react-router-dom"
 
 export default function Storymanager() {
     const propsNum = useLocation();
-    console.log(propsNum.state.propsNum)
+    let personNum = propsNum.state.propsNum;
+
+    // success로 성공 여부 판단해서 값 넘겨주고 프레임 이미지 불러오기
 
     //1번 감자를 선택했다면 랜덤으로 번호를 재생성한다
-    if(propsNum.state.propsNum === 1) {
-        propsNum.state.propsNum = Math.trunc(Math.random() * 3 + 3);
+    if(personNum === 1) {
+        personNum = Math.trunc(Math.random() * 3 + 3);
     }
+    if(propsNum.state.success === 0) personNum = 6
+
 
     //사람 이미지도 props로 전달하기
     const storyData1 = {
@@ -85,7 +89,7 @@ export default function Storymanager() {
     const navigateURL6 = "photo"
     const resultImgURL6 = `../images/potatos/potato${propsNum.state.propsNum}_1.png`
 
-    switch(propsNum.state.propsNum) {
+    switch(personNum) {
         case 0 : return( <Story storyData={storyData1} person={person1} limit={limit1} navigateURL={navigateURL1} resultImgURL={resultImgURL1}/> )
         case 2 : return( <Story storyData={storyData2} person={person2} limit={limit2} navigateURL={navigateURL2} resultImgURL={resultImgURL2}/> )
         case 3 : return( <Story storyData={storyData3} person={person3} limit={limit3} navigateURL={navigateURL3} resultImgURL={resultImgURL3}/> )

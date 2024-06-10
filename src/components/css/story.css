@@ -59,6 +59,7 @@ body {
     margin-left: 1180px;
     margin-bottom: 48px;
     z-index: 20;
+    cursor: pointer; /* 손 모양으로 변경 */
 }
 .menImg {
     width: 800px;

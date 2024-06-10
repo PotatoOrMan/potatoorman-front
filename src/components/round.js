@@ -29,14 +29,12 @@ export default function Round() {
     }, [roundIdx, showModal])
 
     useEffect(() => {
-        const handleKeyDwon = (e) => {
-            // 스페이스바를 누르면 모달창이 사라지기
-            if(e.key === ' ' || e.key === 'Space') setShowModal(false)
-        } 
-        document.addEventListener('keydown', handleKeyDwon)
-
-        return () => document.removeEventListener('keydown', handleKeyDwon)
-    }, [])
+        // 키보드 입력 설명 모달창이 2초동안 화면에 뜨게 하기
+        const modalTimer = setTimeout(() => {
+            setShowModal(false);
+        },2000);
+        return () => clearTimeout(modalTimer);
+    }, [roundIdx])
     
 
     return (
