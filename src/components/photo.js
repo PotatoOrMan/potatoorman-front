@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './css/photo.css';
 import WebcamCapture from "./webcamCapture";
+import { useLocation } from "react-router-dom";
 
 function PhotoModal() {
   return (
@@ -13,19 +14,18 @@ function PhotoModal() {
   )
 }
 
-function CapturedImage({capturedImage}) {
+function CapturedImage({capturedImage, potatoIdx}) { 
   return(
     <>
         <div className="capturedImageContainer">
           <div className="captureImgBorder">
             <img src={capturedImage} alt="Captured" />
-            <img src="../images/manframes/badboy_frame.png" className="Frame" alt="nerdFrmae"/>
-            {/* <img src="../images/potatoframes/frame_potato3.png" className="Frame" alt="nerdFrmae"/> */}
+            <img src={`../images/frames/frame_${potatoIdx}.png`} className="Frame" alt="photoframe"/>
           </div>
         </div>
         <div className="sendEmail">
             <p>사진을 전송하시겠습니까?</p>
-            <input type='text' />
+            <input type='email' placeholder="이메일 입력" className="sendInput"/>
             <div className="buttonContainer">
               <button>아니요</button>
               <button>전송</button>
@@ -35,14 +35,13 @@ function CapturedImage({capturedImage}) {
   )
 }
 
-function WebCam({setCapturedImage, time}) {
+function WebCam({setCapturedImage, time, potatoIdx}) {
   return (
     <div className="webcamContainer">
       <div className="webcamBorder">
         <WebcamCapture onCapture={setCapturedImage} />
         <p className="timeText">{time<=5 && time}</p>
-        <img src="../images/manframes/badboy_frame.png" className="Frame" alt="nerdFrmae"/>
-        {/* <img src="../images/potatoframes/frame_potato3.png" className="Frame" alt="nerdFrmae"/> */}
+        <img src={`../images/frames/frame_${potatoIdx}.png`} className="Frame" alt="photofrmae"/>
       </div>
     </div>
   )
@@ -53,6 +52,9 @@ export default function Photo() {
   const [showModal, setShowModal] = useState(true);
   const [capturedImage, setCapturedImage] = useState(null);
   const [time, setTime] = useState(10)
+  const location = useLocation();
+  let potatoIdx = location.state.potatoIdx - 1
+
 
   useEffect(() => {
     document.body.style.backgroundImage = bgImg;
@@ -79,48 +81,13 @@ export default function Photo() {
     }
   }, [time, showModal])
 
-  useEffect(() => {
-    // 이메일 전송 창 띄우기
-  })
-
   return (
     showModal ? 
     <PhotoModal />
     :
-<<<<<<< Updated upstream
-    <>
-      {capturedImage ? 
-      <>
-        <div className="capturedImageContainer">
-          <div className="captureImgBorder">
-            <img src={capturedImage} alt="Captured" />
-            <img src="../images/frames/frame_2.png" className="Frame" alt="nerdFrmae"/>
-          </div>
-        </div>
-        <div className="sendEmail">
-            <p>사진을 전송하시겠습니까?</p>
-            <input type='text' />
-            <div className="buttonContainer">
-              <button>아니요</button>
-              <button>전송</button>
-            </div>
-          </div>
-      </>
-       : 
-        <div className="webcamContainer">
-          <div className="webcamBorder">
-            <WebcamCapture onCapture={setCapturedImage} />
-            <p className="timeText">{time<=5 && time}</p>
-            <img src="../images/frames/frame_2.png" className="Frame" alt="nerdFrmae"/>
-          </div>
-        </div>
-      }
-    </>
-=======
     capturedImage ?
-    <CapturedImage capturedImage={capturedImage}/>
+    <CapturedImage capturedImage={capturedImage} potatoIdx={potatoIdx}/>
     : 
-    <WebCam setCapturedImage={setCapturedImage} time={time}/>
->>>>>>> Stashed changes
+    <WebCam setCapturedImage={setCapturedImage} time={time} potatoIdx={potatoIdx} />
   );
 }

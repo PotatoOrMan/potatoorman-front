@@ -77,10 +77,27 @@
     background-color: rgba(255, 255, 255, 0.4);
     border: 15px solid #fff;
     border-radius: 30px;
+    top: 50%;   /* 정가운데 위치하도록 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* sendEmail안의 내용 정가운데 위치시키기 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 .sendEmail > p {
     font-family: 'KCC-Hanbit';
     font-size: 50px;
+}
+.sendInput { /* input 태그 스타일링 */
+    width: 465px;
+    height: 75px;
+    border: none;
+    outline: none; /* 클릭했을 때 테두리 없애기 */
+    font-size: 20px;
+    padding: 10px;
 }
 .buttonContainer button {
     width: 200px;
@@ -89,7 +106,9 @@
     border-radius: 30px;
     background-color: #119A0E;
     color: #fff;
+    font-size: 20px;
 }
 .buttonContainer button:first-child {
     background-color: #575757; /* 아니요 버튼 색 지정 */
+    margin-right: 130px;
 }

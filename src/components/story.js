@@ -33,10 +33,9 @@ export default function Story({storyData, person, limit, navigateURL, resultImgU
         if (index !== limit) {
             setIndex(index + 1);
         } else {
-            navigate(`/${navigateURL}`, {state : {propsNum : potatoIdx}}) // choice 화면으로 이동, 사진 찍는 화면으로 이동
+            navigate(`/${navigateURL}`, {state : {potatoIdx : potatoIdx}}) // choice 화면으로 이동, 사진 찍는 화면으로 이동
         }
     };
-    
     const bgImg = storyData.bgImg[index];
     const text = storyData.text[index];
     

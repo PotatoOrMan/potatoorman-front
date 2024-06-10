@@ -29,10 +29,10 @@ export default function Round() {
     }, [roundIdx, showModal])
 
     useEffect(() => {
-        // 키보드 입력 설명 모달창이 2초동안 화면에 뜨게 하기
+        // 키보드 입력 설명 모달창이 1.5초동안 화면에 뜨게 하기
         const modalTimer = setTimeout(() => {
             setShowModal(false);
-        },2000);
+        },1500);
         return () => clearTimeout(modalTimer);
     }, [roundIdx])
     

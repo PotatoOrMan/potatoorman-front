@@ -11,7 +11,7 @@ export default function Storymanager() {
     if(personNum === 1) {
         personNum = Math.trunc(Math.random() * 3 + 3);
     }
-    if(propsNum.state.success === 0) personNum = 6
+    // if(propsNum.state.success === 0) personNum = 6
 
 
     //사람 이미지도 props로 전달하기
@@ -91,11 +91,11 @@ export default function Storymanager() {
 
     switch(personNum) {
         case 0 : return( <Story storyData={storyData1} person={person1} limit={limit1} navigateURL={navigateURL1} resultImgURL={resultImgURL1}/> )
-        case 2 : return( <Story storyData={storyData2} person={person2} limit={limit2} navigateURL={navigateURL2} resultImgURL={resultImgURL2}/> )
-        case 3 : return( <Story storyData={storyData3} person={person3} limit={limit3} navigateURL={navigateURL3} resultImgURL={resultImgURL3}/> )
-        case 4 : return( <Story storyData={storyData4} person={person4} limit={limit4} navigateURL={navigateURL4} resultImgURL={resultImgURL4}/> )
-        case 5 : return( <Story storyData={storyData5} person={person5} limit={limit5} navigateURL={navigateURL5} resultImgURL={resultImgURL5}/> )
-        case 6 : return( <Story storyData={storyData6} person={person6} limit={limit6} navigateURL={navigateURL6} resultImgURL={resultImgURL6}/>)
+        case 2 : return( <Story storyData={storyData2} person={person2} limit={limit2} navigateURL={navigateURL2} resultImgURL={resultImgURL2} potatoIdx={personNum}/> )
+        case 3 : return( <Story storyData={storyData3} person={person3} limit={limit3} navigateURL={navigateURL3} resultImgURL={resultImgURL3} potatoIdx={personNum}/> )
+        case 4 : return( <Story storyData={storyData4} person={person4} limit={limit4} navigateURL={navigateURL4} resultImgURL={resultImgURL4} potatoIdx={personNum}/> )
+        case 5 : return( <Story storyData={storyData5} person={person5} limit={limit5} navigateURL={navigateURL5} resultImgURL={resultImgURL5} potatoIdx={personNum}/> )
+        case 6 : return( <Story storyData={storyData6} person={person6} limit={limit6} navigateURL={navigateURL6} resultImgURL={resultImgURL6} potatoIdx={personNum}/>)
         default : return null
     }
 
