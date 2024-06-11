@@ -25,7 +25,7 @@ function InfoBox({ text, changeIndex, person }) {
     );
 }
 
-export default function Story({storyData, person, limit, navigateURL, resultImgURL, potatoIdx}) {
+export default function Story({storyData, person, limit, navigateURL, resultImgURL, potatoIdx, success}) {
     const [index, setIndex] = useState(0);
     const navigate = useNavigate(); // 화면 바꿀 때 사용
 
@@ -33,7 +33,7 @@ export default function Story({storyData, person, limit, navigateURL, resultImgU
         if (index !== limit) {
             setIndex(index + 1);
         } else {
-            navigate(`/${navigateURL}`, {state : {potatoIdx : potatoIdx}}) // choice 화면으로 이동, 사진 찍는 화면으로 이동
+            navigate(`/${navigateURL}`, {state : {potatoIdx : potatoIdx, success : success}}) // choice 화면으로 이동, 사진 찍는 화면으로 이동
         }
     };
     const bgImg = storyData.bgImg[index];

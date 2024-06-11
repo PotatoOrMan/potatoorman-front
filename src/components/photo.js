@@ -55,6 +55,7 @@ export default function Photo() {
   const location = useLocation();
   let potatoIdx = location.state.potatoIdx - 1
 
+  if(location.state.success === 'X') potatoIdx = location.state.potatoIdx + 4; // 실패하면 감자 프레임이 나오도록 설정
 
   useEffect(() => {
     document.body.style.backgroundImage = bgImg;

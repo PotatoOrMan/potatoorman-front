@@ -35,7 +35,7 @@ function ResultScreen({gauge1, gauge2, gauge3, finalGauge}) {
 export default function ResultPlayview2() {
     const navigate = useNavigate()
     const location = useLocation()
-    const success = 0
+    const success = 'X' // 성공여부 확인 성공이면 'O', 실패면 'X'
     const [smoke, setSmoke] = useState(false)
     // 게이지바 길이를 useState 배열에 저장
     const [gauges, setGauges] = useState({

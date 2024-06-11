@@ -3,16 +3,14 @@ import { useLocation } from "react-router-dom"
 
 export default function Storymanager() {
     const propsNum = useLocation();
+    const success = propsNum.state.success;
     let personNum = propsNum.state.propsNum;
-
-    // success로 성공 여부 판단해서 값 넘겨주고 프레임 이미지 불러오기
 
     //1번 감자를 선택했다면 랜덤으로 번호를 재생성한다
     if(personNum === 1) {
         personNum = Math.trunc(Math.random() * 3 + 3);
     }
-    // if(propsNum.state.success === 0) personNum = 6
-
+    if(success === 'X') personNum = 6   // 실패면 personNum을 6으로 바꿔서 감자가 나오도록 함
 
     //사람 이미지도 props로 전달하기
     const storyData1 = {
@@ -87,15 +85,15 @@ export default function Storymanager() {
     const person6 = "감자"
     const limit6 = 0
     const navigateURL6 = "photo"
-    const resultImgURL6 = `../images/potatos/potato${propsNum.state.propsNum}_1.png`
+    const resultImgURL6 = `../images/potatos/potato${propsNum.state.propsNum}_3.png`
 
     switch(personNum) {
         case 0 : return( <Story storyData={storyData1} person={person1} limit={limit1} navigateURL={navigateURL1} resultImgURL={resultImgURL1}/> )
-        case 2 : return( <Story storyData={storyData2} person={person2} limit={limit2} navigateURL={navigateURL2} resultImgURL={resultImgURL2} potatoIdx={personNum}/> )
-        case 3 : return( <Story storyData={storyData3} person={person3} limit={limit3} navigateURL={navigateURL3} resultImgURL={resultImgURL3} potatoIdx={personNum}/> )
-        case 4 : return( <Story storyData={storyData4} person={person4} limit={limit4} navigateURL={navigateURL4} resultImgURL={resultImgURL4} potatoIdx={personNum}/> )
-        case 5 : return( <Story storyData={storyData5} person={person5} limit={limit5} navigateURL={navigateURL5} resultImgURL={resultImgURL5} potatoIdx={personNum}/> )
-        case 6 : return( <Story storyData={storyData6} person={person6} limit={limit6} navigateURL={navigateURL6} resultImgURL={resultImgURL6} potatoIdx={personNum}/>)
+        case 2 : return( <Story storyData={storyData2} person={person2} limit={limit2} navigateURL={navigateURL2} resultImgURL={resultImgURL2} potatoIdx={personNum} success={success}/> )
+        case 3 : return( <Story storyData={storyData3} person={person3} limit={limit3} navigateURL={navigateURL3} resultImgURL={resultImgURL3} potatoIdx={personNum} success={success}/> )
+        case 4 : return( <Story storyData={storyData4} person={person4} limit={limit4} navigateURL={navigateURL4} resultImgURL={resultImgURL4} potatoIdx={personNum} success={success}/> )
+        case 5 : return( <Story storyData={storyData5} person={person5} limit={limit5} navigateURL={navigateURL5} resultImgURL={resultImgURL5} potatoIdx={personNum} success={success}/> )
+        case 6 : return( <Story storyData={storyData6} person={person6} limit={limit6} navigateURL={navigateURL6} resultImgURL={resultImgURL6} potatoIdx={propsNum.state.propsNum} success={success} />)
         default : return null
     }
 
