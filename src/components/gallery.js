@@ -18,7 +18,7 @@ function TextView() {
 function PhotoView() {
     return (
         <div className="photo-container">
-            <div className="photo-item"><img src="../images/frames/frame_1.png"></img></div>
+            <div className="photo-item"><img src="../images/frames/frame_1.png" alt="galleryImg"></img></div>
             {/* <div className="photo-item"></div>
             <div className="photo-item"></div>
             <div className="photo-item"></div>
