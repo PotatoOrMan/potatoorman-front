@@ -48,6 +48,7 @@ export default function ResultPlayview2() {
     // 5초 동안 결과를 보여주기 -> 연기 효과 나오면서 결과 스토리 화면으로 이동
     useEffect(() => {
         document.body.style.backgroundImage = "url(../images/backgrounds/play_background1.png)";
+        const explosionSound = new Audio('../bgm/explosion.mp3')
         
         // setTimeout을 한 번에 묶어서 사용
         const timeouts = [
@@ -55,7 +56,10 @@ export default function ResultPlayview2() {
             setTimeout(() => setGauges(gauges => ({ ...gauges, gauge2: "500px" })), 2000),
             setTimeout(() => setGauges(gauges => ({ ...gauges, gauge3: "700px" })), 3000),
             setTimeout(() => setGauges(gauges => ({ ...gauges, finalGauge: "900px" })), 4000),
-            setTimeout(() => setSmoke(true), 5000),
+            setTimeout(() => {
+                setSmoke(true)
+                explosionSound.play()
+            },5000),
             // 결과창 보여주는것과 연기 gif가 나타나는 시간을 합친 것
             setTimeout(() => {
                 navigate('/storymanager', { state: { propsNum: location.state.propsNum, success: success } });

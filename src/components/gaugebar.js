@@ -7,6 +7,7 @@ export default function Gaugebar({ roundIdx }) {
     const [keysPressed, setKeysPressed] = useState({}); // 두 개의 키 이벤트의 상태를 관리하는 상태
     const [comboTriggered, setComboTriggered] = useState(false); // 두 개의 키를 연속적으로 누를 때 게이지가 올라가지 않도록 막는 트리거
     
+    
     // 스페이스바와 방향키를 객체에 넣어서 상태 업로드
     const handleKeyDown = useCallback((event) => {
         setKeysPressed((prevKeys) => ({
@@ -22,15 +23,17 @@ export default function Gaugebar({ roundIdx }) {
     }, []);
     
     useEffect(() => {
+        const spacebarSound = new Audio('../bgm/spacebar.mp3') // 키보드 효과음
         const keyNames = ['ArrowUp', 'ArrowLeft', 'ArrowRight'];
         // 스페이스바와 방향키를 누름 , 연속적으로 누르고 있지 않음
         if (keysPressed['Space'] && keysPressed[keyNames[roundIdx-1]] && !comboTriggered) {
             setGaugeWidth((prevWidth) => {
                 if (prevWidth < 1314) {
+                    spacebarSound.play();
                     return prevWidth + 15;
                 }
                 return prevWidth; // 1314px 이상일 경우 더 이상 증가하지 않음
-            });
+            }); 
             setComboTriggered(true);    // 키를 누르면 comboTriggered가 true로 바뀌기 때문에 연속적으로 누르는 것을 방지 할 수 있음 
         }
         
