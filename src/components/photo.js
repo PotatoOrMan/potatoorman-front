@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import './css/photo.css';
 import WebcamCapture from "./webcamCapture";
 import { useLocation, Link } from "react-router-dom";
+import html2canvas from "html2canvas";
 
 function PhotoModal() {
   return (
@@ -15,10 +16,22 @@ function PhotoModal() {
 }
 
 function CapturedImage({capturedImage, potatoIdx}) { 
+  const captureRef = useRef(null)
+  const [capturedURL, setCapturedURL] = useState("")
+
+  // 이미지 캡쳐 기능
+  const handleCapture = () => {
+    html2canvas(captureRef.current).then(canvas => { // 캡쳐가 완료되면 .then()작업을 시작함
+      const captured = canvas.toDataURL()
+      setCapturedURL(captured)
+      console.log(capturedURL)  // 이미지 폴더에 저장하는 코드로 변경
+    })
+  }
+
   return(
     <>
         <div className="capturedImageContainer">
-          <div className="captureImgBorder">
+          <div className="captureImgBorder" ref={captureRef}>
             <img src={capturedImage} alt="Captured" style={{transform: 'scaleX(-1)'}}/> {/* 사진 거울모드로 반전 */}
             <img src={`../images/frames/frame_${potatoIdx}.png`} className="Frame" alt="photoframe" />
           </div>
@@ -28,7 +41,7 @@ function CapturedImage({capturedImage, potatoIdx}) {
             <input type='email' placeholder="이메일 입력" className="sendInput"/>
             <div className="buttonContainer">
               <Link to="/"><button style={{backgroundColor:'#575757', marginRight:'130px'}}>아니요</button></Link>
-              <Link to="/"><button>전송</button></Link>
+              <Link to="/"><button onClick={handleCapture}>전송</button></Link>
             </div>
           </div>
       </>
