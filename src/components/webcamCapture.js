@@ -16,8 +16,8 @@ const WebcamCapture = ({ onCapture }) => {
       if (webcamRef.current) {
         const imageSrc = webcamRef.current.getScreenshot();
         onCapture(imageSrc);
+        cameraSound.play()
       }
-      cameraSound.play()
     }, 10000); // 10초 후에 자동으로 사진을 찍음
 
     return () => clearTimeout(timer);
