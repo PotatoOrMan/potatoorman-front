@@ -12,21 +12,21 @@ function PhotoModal() {
         <div className='spacebar'>space</div>
       </div>
     </div>
-  );
+  )
 }
 
-function CapturedImage({ capturedImage, potatoIdx }) {
-  const captureRef = useRef(null);
-  const [capturedURL, setCapturedURL] = useState("");
+function CapturedImage({capturedImage, potatoIdx}) { 
+  const captureRef = useRef(null)
+  const [capturedURL, setCapturedURL] = useState("")
 
   // 이미지 캡쳐 기능
   const handleCapture = () => {
-    html2canvas(captureRef.current).then(canvas => {
-      const captured = canvas.toDataURL();
-      setCapturedURL(captured);
-      console.log(captured, "Captured Image URL");  // 로그 출력 위치 수정
-    });
-  };
+    html2canvas(captureRef.current).then(canvas => { // 캡쳐가 완료되면 .then()작업을 시작함
+      const captured = canvas.toDataURL()
+      setCapturedURL(captured)
+      console.log(capturedURL)  // 이미지 폴더에 저장하는 코드로 변경
+    })
+  }
 
   return (
     <>
@@ -50,27 +50,27 @@ function CapturedImage({ capturedImage, potatoIdx }) {
   );
 }
 
-function WebCam({ setCapturedImage, time, potatoIdx }) {
+function WebCam({setCapturedImage, time, potatoIdx}) {
   return (
     <div className="webcamContainer">
       <div className="webcamBorder">
         <WebcamCapture onCapture={setCapturedImage} />
-        <p className="timeText">{time <= 5 && time}</p>
-        <img src={`../images/frames/frame_${potatoIdx}.png`} className="Frame" alt="photoframe" />
+        <p className="timeText">{time<=5 && time}</p>
+        <img src={`../images/frames/frame_${potatoIdx}.png`} className="Frame" alt="photofrmae"/>
       </div>
     </div>
-  );
+  )
 }
 
 export default function Photo() {
   const [bgImg, setBgImg] = useState('url(../images/backgrounds/play_background1.png)');
   const [showModal, setShowModal] = useState(true);
   const [capturedImage, setCapturedImage] = useState(null);
-  const [time, setTime] = useState(10);
+  const [time, setTime] = useState(10)
   const location = useLocation();
-  let potatoIdx = location.state.potatoIdx - 1;
+  let potatoIdx = location.state.potatoIdx - 1
 
-  if (location.state.success === 'X') potatoIdx = location.state.potatoIdx + 4; // 실패하면 감자 프레임이 나오도록 설정
+  if(location.state.success === 'X') potatoIdx = location.state.potatoIdx + 4; // 실패하면 감자 프레임이 나오도록 설정
 
   useEffect(() => {
     document.body.style.backgroundImage = bgImg;
@@ -81,7 +81,7 @@ export default function Photo() {
     const handleModal = (e) => {
       if (e.key === ' ' || e.key === 'Space') {
         setShowModal(false);
-        setBgImg('url(../images/backgrounds/home_background.png)');
+        setBgImg('url(../images/backgrounds/home_background.png)')
       }
     };
     document.addEventListener('keydown', handleModal);
@@ -102,8 +102,8 @@ export default function Photo() {
       <PhotoModal />
       :
       capturedImage ?
-        <CapturedImage capturedImage={capturedImage} potatoIdx={potatoIdx} />
-        :
-        <WebCam setCapturedImage={setCapturedImage} time={time} potatoIdx={potatoIdx} />
+      <CapturedImage capturedImage={capturedImage} potatoIdx={potatoIdx} />
+      :
+      <WebCam setCapturedImage={setCapturedImage} time={time} potatoIdx={potatoIdx} />
   );
 }
