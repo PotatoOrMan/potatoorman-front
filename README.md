@@ -11,3 +11,6 @@
 감자?남자!를 제작하게 되었다.  
 ### 시연영상
 https://qr.emirim.kr/2
+
+![제목 없는 디자인 (4) 1](https://github.com/PotatoOrMan/potatoorman-front/assets/88700457/112075da-1896-4eb3-b1b7-996150b8582d)
+![느낌표 프로젝트명 _우측](https://github.com/PotatoOrMan/potatoorman-front/assets/88700457/9b416eb0-8bac-446a-afd6-a8479cdc013d)
